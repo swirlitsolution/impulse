@@ -58,7 +58,7 @@ const Courses = () => {
         </div>
       </div>
       <div className="image">
-        <img src="./img/40908801699.png" alt="Courses Image" />
+        <img src="./img/40908801699.png" alt="Courses pic" />
       </div>
     </section>
   );

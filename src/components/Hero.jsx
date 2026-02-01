@@ -10,7 +10,7 @@ const Hero = () => {
         <a href="#courses" className="btn">Get Started</a>
       </div>
       <div className="part2">
-        <img src="./img/hero.png" alt="hero image" />
+        <img src="./img/hero.png" alt="hero pic" />
       </div>
     </section>
   );
