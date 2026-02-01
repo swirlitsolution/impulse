@@ -1,0 +1,126 @@
+.testimonial {
+  width: 100%;
+  background-color: var(--dark-bg);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.testimonial .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial .details h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--text-white);
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.testimonial .details h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: var(--primary-color);
+  margin: 20px auto;
+  transition: width 1s ease-in-out;
+}
+
+.testimonial .details h1:hover::after {
+  width: 250px;
+}
+
+.testimonial .details > p {
+  font-size: 2rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 20px 0 40px 0;
+  max-width: 800px;
+}
+
+.testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.testimonial-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid rgba(238, 171, 46, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.testimonial-item:hover {
+  background: rgba(238, 171, 46, 0.1);
+  border-color: var(--primary-color);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(238, 171, 46, 0.2);
+}
+
+.testimonial-tag {
+  padding: 10px 0;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.testimonial-tag h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+.testimonial-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover img {
+  transform: scale(1.1);
+}
+
+.testimonial-item p {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .testimonial .details h1 {
+    font-size: 3rem;
+  }
+
+  .testimonial .details > p {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-list {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-item p {
+    font-size: 1.3rem;
+  }
+}

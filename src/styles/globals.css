@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  --primary-color: #EEAB2E;
+  --secondary-color: #3399ff;
+  --dark-bg: #1E324A;
+  --text-white: white;
+  --text-light: rgb(202, 202, 202);
+  --text-muted: #d3d1d1;
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark-bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Animations */
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes autoBlur {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+@keyframes borderanimation {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.autoShow {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 100vh;
+}
+
+.blurText {
+  animation: autoBlur linear both;
+  animation-timeline: view(50% auto);
+}
+
+.fadeUp {
+  animation: fadeUp 0.6s ease-out;
+}

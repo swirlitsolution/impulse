@@ -1,0 +1,160 @@
+.footer {
+  width: 100%;
+  background-color: #0d1b2a;
+  color: var(--text-white);
+  padding: 40px 20px;
+  border-top: 2px solid var(--primary-color);
+}
+
+.footer .details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-brand img {
+  height: 50px;
+  width: 40px;
+}
+
+.footer-brand h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.footer-links li {
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-contact h3,
+.footer-social {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.footer-contact p {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer-contact a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--primary-color);
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(238, 171, 46, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: var(--primary-color);
+  transform: scale(1.1) translateY(-3px);
+}
+
+.footer-social img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(238, 171, 46, 0.2);
+}
+
+.footer-copyright p {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer .details {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-contact h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-contact p {
+    font-size: 1.2rem;
+  }
+
+  .footer-links a {
+    font-size: 1.2rem;
+  }
+}
